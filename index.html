@@ -32,10 +32,6 @@
       padding: 16px 0;
     }
 
-    #mobileMenu.w3-show {
-      display: block;
-    }
-
     #mobileMenu a {
       padding: 16px;
       color: white;
@@ -47,7 +43,7 @@
       background-color: #c63529;
     }
 
-   .w3-btn-custom {
+    .w3-btn-custom {
       background-color: #f44336; /* Красный цвет, аналогичный w3-red */
       color: white;
       padding: 16px 32px;
@@ -84,7 +80,7 @@
   </div>
 
   <!-- Мобильное меню -->
-  <div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-red">
+  <div id="mobileMenu" class="w3-bar-block w3-hide w3-red">
     <a href="#gimp" class="w3-bar-item w3-button" onclick="toggleMenu()">Gimp</a>
     <a href="#inkscape" class="w3-bar-item w3-button" onclick="toggleMenu()">Inkscape</a>
     <a href="#3d" class="w3-bar-item w3-button" onclick="toggleMenu()">3D printēšana</a>
@@ -166,15 +162,15 @@
     <h1>Un tas bija viss, paldies par uzmanību!</h1>
     <a href="#home" class="w3-btn-custom">Uz sākumu</a>
   </div>
-  
+
   <!-- Скрипт для мобильного меню -->
   <script>
     function toggleMenu() {
       var menu = document.getElementById("mobileMenu");
-      if (menu.style.display === "block") {
-        menu.style.display = "none";
+      if (menu.classList.contains("w3-show")) {
+        menu.classList.remove("w3-show");
       } else {
-        menu.style.display = "block";
+        menu.classList.add("w3-show");
       }
     }
   </script>
