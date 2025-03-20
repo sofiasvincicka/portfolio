@@ -29,6 +29,22 @@
     #mobileMenu {
       display: none;
     }
+    .w3-btn-custom {
+      background-color: red;
+      color: white;
+      padding: 16px 32px;
+      font-size: 18px;
+      border-radius: 5px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 32px;
+    }
+
+    .w3-btn-custom:hover {
+      background-color: darkred;
+      color: white;
+    }
   </style>
 </head>
 <body>
@@ -127,6 +143,11 @@
     <p>Gimpā es iemācījos izmantot dažādus rīkus. Pārbaudes darbā vajadzēja izveidot bildes pēc izveles. Tev var redzēt kuras es uztaisīju.</p>
   </div>
 
+ <div class="w3-container w3-center">
+    <p>Un tas bija viss, paldies par uzmanību!</p>
+    <a href="#home" class="w3-btn-custom">Uz sākumu</a>
+  </div>
+  
   <!-- Скрипт для мобильного меню -->
   <script>
     function toggleMenu() {
