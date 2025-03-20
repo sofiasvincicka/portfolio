@@ -1,161 +1,133 @@
 <!DOCTYPE html>
 <html lang="lv">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sofijas portfolio</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sofijas Portfolio</title>
+
+  <!-- W3.CSS -->
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
   <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-    .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-    .fa-anchor,.fa-coffee {font-size:200px}
+    body,h1,h2,h3,h4,h5,h6 { font-family: "Lato", sans-serif; }
+    .w3-bar, h1, button { font-family: "Montserrat", sans-serif; }
+    .fa-bars { font-size: 24px; }
+
+    /* Картинки адаптивные */
+    .responsive-img { width: 100%; max-width: 300px; height: auto; }
   </style>
 </head>
 <body>
 
+  <!-- Навигация -->
   <div class="w3-top">
-    <div class="w3-bar w3-red w3-card w3-left-align w3-large w3-hide-small">
-      
-      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <div class="w3-bar w3-red w3-card w3-large">
+      <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+      </a>
       <a href="#home" class="w3-bar-item w3-button w3-padding-large w3-white">Sākums</a>
-      <a href="#gimp" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Gimp</a>
-      <a href="#inkscape" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Inkscape</a>
-      <a href="#3d" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">3D prinēšana</a>
-      <a href="#word" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Word</a>
-      <a href="#excel" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Excel</a>
-    </div>
-    
-    
-   <div id="navDemo" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium">
-  <a href="#gimp" class="w3-bar-item w3-button" onclick="myFunction()">Gimp</a>
-  <a href="#inkscape" class="w3-bar-item w3-button" onclick="myFunction()">Inkscape</a>
-  <a href="#3d" class="w3-bar-item w3-button" onclick="myFunction()">3D printēšana</a>
-  <a href="#word" class="w3-bar-item w3-button" onclick="myFunction()">Word</a>
-  <a href="#excel" class="w3-bar-item w3-button" onclick="myFunction()">Excel</a>
+      <a href="#gimp" class="w3-bar-item w3-button w3-hide-small">Gimp</a>
+      <a href="#inkscape" class="w3-bar-item w3-button w3-hide-small">Inkscape</a>
+      <a href="#3d" class="w3-bar-item w3-button w3-hide-small">3D printēšana</a>
+      <a href="#word" class="w3-bar-item w3-button w3-hide-small">Word</a>
+      <a href="#excel" class="w3-bar-item w3-button w3-hide-small">Excel</a>
     </div>
   </div>
 
-  <!-- Header -->
-  <header class="w3-container w3-red w3-center" style="padding:128px 16px" id="home">
-    <h1 class="w3-margin w3-jumbo">Temati, kurus es apguvu</h1>
+  <!-- Мобильное меню -->
+  <div id="mobileMenu" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-red">
+    <a href="#gimp" class="w3-bar-item w3-button" onclick="toggleMenu()">Gimp</a>
+    <a href="#inkscape" class="w3-bar-item w3-button" onclick="toggleMenu()">Inkscape</a>
+    <a href="#3d" class="w3-bar-item w3-button" onclick="toggleMenu()">3D printēšana</a>
+    <a href="#word" class="w3-bar-item w3-button" onclick="toggleMenu()">Word</a>
+    <a href="#excel" class="w3-bar-item w3-button" onclick="toggleMenu()">Excel</a>
+  </div>
+
+  <!-- Главный заголовок -->
+  <header class="w3-container w3-red w3-center" style="padding:80px 16px;">
+    <h1>Temati, kurus es apguvu</h1>
   </header>
 
-
-<!-- First Grid -->
-<div class="w3-row-padding w3-padding-64 w3-container" id="gimp">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Gimp</h1>
-      <h5 class="w3-padding-32">Gimpā es iemācījos izmantot dažādus rīkus. Pārbaudes darbā vajadzēja izveidot bildes pēc izveles. Tev var redzēt kuras es uztaisīju.</h5>
-
-
-      <table>
-        <tr>
-            <td><img src="images/bilde1.png" alt="1" width="300"></td>
-            <td><img src="images/bilde2.png" alt="2" width="300"></td>
-            <td><img src="images/bilde3.png" alt="3" width="300"></td>
-        </tr>
-    </table>
-
+  <!-- GIMP -->
+  <div class="w3-container w3-padding-64" id="gimp">
+    <h2>Gimp</h2>
+    <p>Gimpā es iemācījos izmantot dažādus rīkus. Pārbaudes darbā vajadzēja izveidot bildes pēc izveles. Tev var redzēt kuras es uztaisīju.</p>
+    <div class="w3-row-padding">
+      <div class="w3-third"><img src="images/bilde1.png" class="responsive-img" alt="Gimp Image 1"></div>
+      <div class="w3-third"><img src="images/bilde2.png" class="responsive-img" alt="Gimp Image 2"></div>
+      <div class="w3-third"><img src="images/bilde3.png" class="responsive-img" alt="Gimp Image 3"></div>
     </div>
   </div>
-</div>
 
-
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="inkscape">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-    </div>
-
-    <div class="w3-twothird">
-      <h1>Inkscape</h1>
-      <h5 class="w3-padding-32">Inkscapes rīku mēs mācījāmies ne tik ļoti ilgi un dziļi, tāpec darbs uz atzīmi bija pēc izvēles</h5>
-
-
-    </div>
+  <!-- Inkscape -->
+  <div class="w3-container w3-light-grey w3-padding-64" id="inkscape">
+    <h2>Inkscape</h2>
+    <p>Inkscape rīku mēs mācījāmies ne tik ļoti ilgi un dziļi, tāpec darbs uz atzīmi bija pēc izvēles.</p>
   </div>
-</div>
-<div class="w3-row-padding w3-padding-64 w3-container" id="3d">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>3D printēšana</h1>
-      <h5 class="w3-padding-32">Šajā tēmā mums bija 2 atzīmes:
-          <ul>
-    <li>3D puzles veidošana grupās</li>
-    <li>Individuāla video veidošana (puzles taisīšanas process + reklāma no powerpoint)</li>
-</ul></h5>
-      <h4><u> 3D puzle </u></h4>
-      <p class="w3-text-grey"> Mūsu puzlei bija jābūt reklāmas suvenīram, tāpec darbu mēs sākām ar biznesu un zīmējām tam logo. Biznesa nosaukums ir "BoltZ" un mēs ražojam energo efektīvas, dabai draudzīgas, ātras mašīnas. Katrs grupas dalībnies uzzimēja savu logo variantu, tad visi kopā izvēlējāmies labāku un piestrādājam to. </p>
-          <img src="images/logo.jpeg" alt="logo" width="300">
-          <p class="w3-text-grey"> Mans variants izskatījās šādi, jo no angļu valodas Bolt ir zibēns, un es gribēju to attēlot mūsu logo burta Z vietā.</p>
- <img src="images/Bolt.jpeg" alt="logo" width="300">
 
- <p> Pēc tam pienācis laiks strādat ar 3D logo variantu. mēs izmantojam programmu "Tinkercad".
-   <img src="images/puzle3d.jpeg" alt="1" width="300">
- <p>&nbsp; </p> <p>&nbsp; </p> <p>&nbsp; </p>
-   <h4><u> Video </u></h4>
-   <p> Visu šo laiku mēs filmējam puzles veidošanas procesu, un no šiem kadriem es izveidoju video.</p> 
-   <ul> <li>Sāku es protams ar scenāriju: 
-  <p>&nbsp; </p>
-   <img src="images/scenarijs.jpeg" alt="logo" style="margin-left: 50px; margin-bottom: 50px " width="300">
-       </li>
-       <li> Tālāk izveidoju video reklāmu PowerPointā - tēma: <b>Kā izveidot drošu paroli?</b>
-   <video width="640" height="360" controls>
-    <source src="images/ppreklama.mp4" type="video/mp4">
-   </video> </li> 
-   <li> Izmantojot aplikāciju CupCut es izveidoju savu videoklipu
-       <video width="640" height="360" controls>
-    <source src="images/video.mp4" type="video/mp4">
-   </video> </li> 
-   </ul>
-    </div>
+  <!-- 3D Printēšana -->
+  <div class="w3-container w3-padding-64" id="3d">
+    <h2>3D printēšana</h2>
+    <p>Šajā tēmā mums bija 2 atzīmes:</p>
+    <ul>
+      <li>3D puzles veidošana grupās</li>
+      <li>Individuāla video veidošana (puzles taisīšanas process + reklāma no powerpoint)</li>
+    </ul>
+    <h4><u>3D puzle</u></h4>
+    <p>Mūsu puzlei bija jābūt reklāmas suvenīram, tāpec darbu mēs sākām ar biznesu un zīmējām tam logo. Biznesa nosaukums ir "BoltZ" un mēs ražojam energo efektīvas, dabai draudzīgas, ātras mašīnas. Katrs grupas dalībnies uzzimēja savu logo variantu, tad visi kopā izvēlējāmies labāku un piestrādājam to.</p>
+    <img src="images/logo.jpeg" class="responsive-img" alt="Logo">
+    <p> Mans variants izskatījās šādi, jo no angļu valodas Bolt ir zibēns, un es gribēju to attēlot mūsu logo burta Z vietā.</p>
+    <img src="images/Bolt.jpeg" class="responsive-img" alt="Bolt logo">
+    <p>Pēc tam pienācis laiks strādāt ar 3D logo variantu. mēs izmantojam programmu "Tinkercad".</p>
+    <img src="images/puzle3d.jpeg" class="responsive-img" alt="3D Puzzle">
+    <h4><u>Video</u></h4>
+    <p>Visu šo laiku mēs filmējam puzles veidošanas procesu, un no šiem kadriem es izveidoju video.</p>
+    <ul>
+      <li>Sāku es protams ar scenāriju:</li>
+      <img src="images/scenarijs.jpeg" class="responsive-img" alt="Scenarijs">
+      <li>Tālāk izveidoju video reklāmu PowerPointā - tēma: <b>Kā izveidot drošu paroli?</b></li>
+      <video width="640" height="360" controls>
+        <source src="images/ppreklama.mp4" type="video/mp4">
+      </video>
+      <li>Izmantojot aplikāciju CupCut es izveidoju savu videoklipu.</li>
+      <video width="640" height="360" controls>
+        <source src="images/video.mp4" type="video/mp4">
+      </video>
+    </ul>
   </div>
-</div>
- 
 
-<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container" id="word">
-  <div class="w3-content">
-    <div class="w3-third w3-center">
-    </div>
-    <div class="w3-twothird">
-      <h1>Word</h1>
-      <h5 class="w3-padding-32">Wordā mēs atkārtojām visu ko mācījāmies iepriekš, ka arī iemācījāmies daudz ko jauna, piemēram:
-      <ul>
-       <li>sludināšana</li> 
-        <li>līzinājums</li>
-        <li>izveidot stilu un sglabāt to</li>
-      </ul>
-      </h5>
-    </div>
+  <!-- Word -->
+  <div class="w3-container w3-light-grey w3-padding-64" id="word">
+    <h2>Word</h2>
+    <p>Wordā mēs atkārtojām visu ko mācījāmies iepriekš, kā arī iemācījāmies daudz ko jauna, piemēram:</p>
+    <ul>
+      <li>Sludināšana</li>
+      <li>Līzinājums</li>
+      <li>Izveidot stilu un saglabāt to</li>
+    </ul>
   </div>
-</div>
-  
-<div class="w3-row-padding w3-padding-64 w3-container" id="excel">
-  <div class="w3-content">
-    <div class="w3-twothird">
-      <h1>Excel</h1>
-      <h5 class="w3-padding-32">Gimpā es iemācījos izmantot dažādus rīkus. Pārbaudes darbā vajadzēja izveidot bildes pēc izveles. Tev var redzēt kuras es uztaisīju.</h5>
 
-   </div>
+  <!-- Excel -->
+  <div class="w3-container w3-padding-64" id="excel">
+    <h2>Excel</h2>
+    <p>Gimpā es iemācījos izmantot dažādus rīkus. Pārbaudes darbā vajadzēja izveidot bildes pēc izveles. Tev var redzēt kuras es uztaisīju.</p>
   </div>
-</div>
-  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
- <script>
-  function myFunction() {
-    var x = document.getElementById("navDemo");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
+
+  <!-- Скрипт для мобильного меню -->
+  <script>
+    function toggleMenu() {
+      var menu = document.getElementById("mobileMenu");
+      if (menu.classList.contains("w3-show")) {
+        menu.classList.remove("w3-show");
+      } else {
+        menu.classList.add("w3-show");
+      }
     }
-  }
-</script>
+  </script>
+
 </body>
 </html>
     
