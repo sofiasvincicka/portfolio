@@ -32,6 +32,10 @@
       padding: 16px 0;
     }
 
+    #mobileMenu.w3-show {
+      display: block;
+    }
+
     #mobileMenu a {
       padding: 16px;
       color: white;
@@ -167,10 +171,10 @@
   <script>
     function toggleMenu() {
       var menu = document.getElementById("mobileMenu");
-      if (menu.classList.contains("w3-show")) {
-        menu.classList.remove("w3-show");
+      if (menu.style.display === "block") {
+        menu.style.display = "none";
       } else {
-        menu.classList.add("w3-show");
+        menu.style.display = "block";
       }
     }
   </script>
