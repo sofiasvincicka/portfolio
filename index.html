@@ -16,16 +16,13 @@
     .w3-bar, h1, button { font-family: "Montserrat", sans-serif; }
     .fa-bars { font-size: 24px; }
 
-    /* Корректное отображение на мобильных устройствах */
     .responsive-img { width: 100%; max-width: 300px; height: auto; }
-
-    /* Видео будет масштабироваться по ширине */
+    
     .responsive-video {
       width: 100%;
       height: auto;
     }
 
-    /* Меню для мобильных устройств */
     #mobileMenu {
       display: none;
       background-color: #f44336;
@@ -64,7 +61,6 @@
 </head>
 <body>
 
-  <!-- Навигация -->
   <div class="w3-top">
     <div class="w3-bar w3-red w3-card w3-large">
       <a href="javascript:void(0);" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="toggleMenu()">
@@ -79,7 +75,6 @@
     </div>
   </div>
 
-  <!-- Мобильное меню -->
   <div id="mobileMenu" class="w3-bar-block w3-hide w3-red">
     <a href="#gimp" class="w3-bar-item w3-button" onclick="toggleMenu()">Gimp</a>
     <a href="#inkscape" class="w3-bar-item w3-button" onclick="toggleMenu()">Inkscape</a>
@@ -88,12 +83,10 @@
     <a href="#excel" class="w3-bar-item w3-button" onclick="toggleMenu()">Excel</a>
   </div>
 
-  <!-- Главный заголовок -->
   <header class="w3-container w3-red w3-center" style="padding:80px 16px;" id="home">
     <h1>Temati, kurus es apguvu</h1>
   </header>
 
-  <!-- GIMP -->
   <div class="w3-container w3-padding-64" id="gimp">
     <h2>Gimp</h2>
     <p>Gimpā es iemācījos izmantot dažādus rīkus. Pārbaudes darbā vajadzēja izveidot bildes pēc izveles. Tev var redzēt kuras es uztaisīju.</p>
@@ -104,13 +97,11 @@
     </div>
   </div>
 
-  <!-- Inkscape -->
   <div class="w3-container w3-light-grey w3-padding-64" id="inkscape">
     <h2>Inkscape</h2>
     <p>Inkscape rīku mēs mācījāmies ne tik ļoti ilgi un dziļi, tāpec darbs uz atzīmi bija pēc izvēles.</p>
   </div>
 
-  <!-- 3D Printēšana -->
   <div class="w3-container w3-padding-64" id="3d">
     <h2>3D printēšana</h2>
     <p>Šajā tēmā mums bija 2 atzīmes:</p>
@@ -141,7 +132,6 @@
     </ul>
   </div>
 
-  <!-- Word -->
   <div class="w3-container w3-light-grey w3-padding-64" id="word">
     <h2>Word</h2>
     <p>Wordā mēs atkārtojām visu ko mācījāmies iepriekš, kā arī iemācījāmies daudz ko jauna, piemēram:</p>
@@ -152,7 +142,6 @@
     </ul>
   </div>
 
-  <!-- Excel -->
   <div class="w3-container w3-padding-64" id="excel">
     <h2>Excel</h2>
     <p>Mācoties par Excel mēs 4 nedēļas pēc kārtas pildījām treniņdarbalapas tajā programmā un pēc tam uzrakstījām pārbaudes darbu.</p>
@@ -163,7 +152,6 @@
     <a href="#home" class="w3-btn-custom">Uz sākumu</a>
   </div>
 
-  <!-- Скрипт для мобильного меню -->
   <script>
     function toggleMenu() {
       var menu = document.getElementById("mobileMenu");
