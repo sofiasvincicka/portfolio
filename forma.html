@@ -21,7 +21,7 @@
         <div>2.skaitlis <input type="text" name="sk2"> </div>
         <hr>
         <div>
-            <input value="+" onclick="calcForm.rez.value=Number(calcForm.sk1.value)+Number(calcForm.sk2.value)" type="button">
+            <input value="+" onclick="calcForm.rez.value=Number(calcForm.sk1.value)-(-Number(calcForm.sk2.value))" type="button">
             <input value="-" onclick="calcForm.rez.value=Number(calcForm.sk1.value)-Number(calcForm.sk2.value)" type="button">
             <input value="X" onclick="calcForm.rez.value=Number(calcForm.sk1.value)*Number(calcForm.sk2.value)" type="button">
             <input value="/" onclick="calcForm.rez.value=Number(calcForm.sk1.value)/Number(calcForm.sk2.value)" type="button">
