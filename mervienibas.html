@@ -1,1 +1,44 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informācijas daudzuma mērvienības</title>
+    <style>
+        body {
+            background-image: url('klases/cipari.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        form {
+            font-size: 20px;
+            background-color: rgb(220, 220, 0);
+            padding: 20px;
+            width: 300px;
+            border-radius: 10px;
+        }
+        input {
+            width: 100px;
+            margin-left: 10px;
+        }
+        button {
+            display: block;
+            margin-top: 10px;
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Informācijas daudzuma mērvienības</h1>
+    <form>
+        <p>1 Baits = <input type="text" id="baits" readonly> Biti</p>
+        <button type="button" onclick="document.getElementById('baits').value = 8">Aprēķināt</button>
 
+        <p>1 Kilobaits = <input type="text" id="kilobaits" readonly> Baiti</p>
+        <button type="button" onclick="document.getElementById('kilobaits').value = 1024">Aprēķināt</button>
+
+        <p>1 Megabaits = <input type="text" id="megabaits" readonly> Kilobaiti</p>
+        <button type="button" onclick="document.getElementById('megabaits').value = 1024">Aprēķināt</button>
+    </form>
+</body>
+</html>
