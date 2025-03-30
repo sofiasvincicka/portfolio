@@ -10,19 +10,28 @@
     <hr>
     <form>
       <p>“Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
-      <label>Gads:</label><Input type="text" name="gads" id="gads"><br>
-      <label>Mēnesis:</label><Input type="text" name="menesis" id="menesis"><br>
-      <label>Diena:</label><Input type="text" name="diena" id="diena"><br>
-     <button type="button" onclick="dienas();">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+       <label for="gads">Gads:</label>
+        <input type="text" id="gads" name="gads"><br><br>
+        <label for="menesis">Mēnesis:</label>
+        <input type="text" id="menesis" name="menesis"><br><br>
+        <label for="datums">Diena:</label>
+        <input type="text" id="datums" name="datums"><br><br>
+        <button type="button" onclick="dienas();">Aprēķināt dienu skaitu līdz dzimšanas dienai</button>
+       </form>
+    
       <p>Līdz svētkiem atlikušas</p> 
       <input type="text" name="dienas" id="dienas" readonly>
-      <p> dienas: ))</p>
-    </form>
+      <p> dienas</p>
+
     <script>
        function dienas() {
             var gads = parseInt(document.getElementById("gads").value);
             var menesis = parseInt(document.getElementById("menesis").value);
             var datums = parseInt(document.getElementById("datums").value);
+
+         if (isNaN(gads) || isNaN(menesis) || isNaN(datums)) {
+                alert("Lūdzu, ievadiet derīgus skaitļus!");
+                return;
 
             var dzimsanasDatums = new Date(gads, menesis - 1, datums);
             var todaysDate = new Date();
