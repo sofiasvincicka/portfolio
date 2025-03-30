@@ -19,21 +19,23 @@
       <p> dienas: ))</p>
     </form>
     <script>
-      function dienas() {
-        let gads = parselnt(document.getElementByld("gads").value);
-        let menesis = parselnt(document.getElementByld("menesis").value);
-        let dat = parselnt(document.getElementByld("datums").value);
+       function dienas() {
+            var gads = parseInt(document.getElementById("gads").value);
+            var menesis = parseInt(document.getElementById("menesis").value);
+            var datums = parseInt(document.getElementById("datums").value);
 
-        let today = new date();
-        let birthday new date(today.getFullYear(), menesis - 1, datums)
-        if(today>birthday){
-          birthday.setFullYear(today.getFullYear() + 1)
+            var dzimsanasDatums = new Date(gads, menesis - 1, datums);
+            var todaysDate = new Date();
+
+            if (todaysDate > dzimsanasDatums) {
+                dzimsanasDatums.setFullYear(todaysDate.getFullYear() + 1);
+            }
+
+            var timeDifference = dzimsanasDatums - todaysDate;
+            var dienasLidzDzimšanas = Math.ceil(timeDifference / (1000 * 3600 * 24)); // Pārvēršam no milisekundēm uz dienām
+
+            document.getElementById("dienas").value = dienasLidzDzimšanas;
         }
-        let diffTime = birthday - today;
-        let diffDays = MAth.cell(diffTime / (1000*60*60*24));
-
-        document.getElementByld("dienas").value = diffDays;
-      }
     </script>
   
   </body>
