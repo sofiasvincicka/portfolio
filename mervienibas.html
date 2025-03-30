@@ -6,7 +6,7 @@
     <title>Informācijas daudzuma mērvienības</title>
     <style>
         body {
-            background-image: url('klases/cipari.jpg');
+            background-image: url('images/cipari.jpg');
             background-size: cover;
             font-family: Arial, sans-serif;
         }
@@ -14,7 +14,7 @@
             font-size: 20px;
             background-color: rgb(220, 220, 0);
             padding: 20px;
-            width: 300px;
+            width: 400px;
             border-radius: 10px;
         }
         input {
@@ -29,16 +29,25 @@
     </style>
 </head>
 <body>
-    <h1>Informācijas daudzuma mērvienības</h1>
+    <h1><b>Informācijas daudzuma mērvienības</b></h1>
     <form>
-        <p>1 Baits = <input type="text" id="baits" readonly> Biti</p>
-        <button type="button" onclick="document.getElementById('baits').value = 8">Aprēķināt</button>
-
-        <p>1 Kilobaits = <input type="text" id="kilobaits" readonly> Baiti</p>
-        <button type="button" onclick="document.getElementById('kilobaits').value = 1024">Aprēķināt</button>
-
-        <p>1 Megabaits = <input type="text" id="megabaits" readonly> Kilobaiti</p>
-        <button type="button" onclick="document.getElementById('megabaits').value = 1024">Aprēķināt</button>
+        <input type="text" id="gb" value="2"> GB =
+        <br><br>
+        <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
+        <input type="text" id="mb" readonly> MB
+        <br><br>
+        <button type="button" onclick="convertToMiB()">Izteikt mibibaitos</button>
+        <input type="text" id="mib" readonly> MiB
     </form>
+    <script>
+        function convertToMB() {
+            let gb = parseFloat(document.getElementById('gb').value);
+            document.getElementById('mb').value = gb * 1000;
+        }
+        function convertToMiB() {
+            let gb = parseFloat(document.getElementById('gb').value);
+            document.getElementById('mib').value = gb * 953.674;
+        }
+    </script>
 </body>
 </html>
