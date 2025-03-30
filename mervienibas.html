@@ -10,11 +10,14 @@
             background-size: cover;
             font-family: Arial, sans-serif;
         }
+        h1 {
+            font-weight: bold;
+        }
         form {
             font-size: 20px;
             background-color: rgb(220, 220, 0);
             padding: 20px;
-            width: 400px;
+            width: 500px;
             border-radius: 10px;
         }
         input {
@@ -22,22 +25,32 @@
             margin-left: 10px;
         }
         button {
-            display: block;
-            margin-top: 10px;
+            display: inline-block;
+            margin: 5px 0;
             padding: 5px 10px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
         }
     </style>
 </head>
 <body>
-    <h1><b>Informācijas daudzuma mērvienības</b></h1>
+    <h1>Informācijas daudzuma mērvienības</h1>
     <form>
-        <input type="text" id="gb" value="2"> GB =
-        <br><br>
-        <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
-        <input type="text" id="mb" readonly> MB
-        <br><br>
-        <button type="button" onclick="convertToMiB()">Izteikt mibibaitos</button>
-        <input type="text" id="mib" readonly> MiB
+        <div class="container">
+            <input type="text" id="gb" value="2"> GB=
+        </div>
+        <br>
+        <div class="container">
+            <button type="button" onclick="convertToMB()">Izteikt megabaitos</button>
+            <input type="text" id="mb" readonly> MB
+        </div>
+        <br>
+        <div class="container">
+            <button type="button" onclick="convertToMiB()">Izteikt mibibaitos</button>
+            <input type="text" id="mib" readonly> MiB
+        </div>
     </form>
     <script>
         function convertToMB() {
@@ -51,3 +64,4 @@
     </script>
 </body>
 </html>
+
