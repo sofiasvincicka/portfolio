@@ -9,7 +9,7 @@
      <h1>Gaidot dzimšanas dienu..</h1>
     <hr>
     <form>
-      <p>“Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
+      <p>Ievadi pilnu datumu, kad Tev būs tuvākā dzimšanas diena</p>
        <label for="gads">Gads:</label>
         <input type="text" id="gads" name="gads"><br><br>
         <label for="menesis">Mēnesis:</label>
@@ -29,19 +29,20 @@
             var menesis = parseInt(document.getElementById("menesis").value);
             var datums = parseInt(document.getElementById("datums").value);
 
-         if (isNaN(gads) || isNaN(menesis) || isNaN(datums)) {
+            if (isNaN(gads) || isNaN(menesis) || isNaN(datums)) {
                 alert("Lūdzu, ievadiet derīgus skaitļus!");
                 return;
+            }
 
-            var dzimsanasDatums = new Date(gads, menesis - 1, datums);
+            var dzimsanasDatums = new Date(new Date().getFullYear(), menesis - 1, datums);
             var todaysDate = new Date();
-
+         
             if (todaysDate > dzimsanasDatums) {
-                dzimsanasDatums.setFullYear(todaysDate.getFullYear() + 1);
+                dzimsanasDatums.setFullYear(dzimsanasDatums.getFullYear() + 1);
             }
 
             var timeDifference = dzimsanasDatums - todaysDate;
-            var dienasLidzDzimšanas = Math.ceil(timeDifference / (1000 * 3600 * 24)); // Pārvēršam no milisekundēm uz dienām
+            var dienasLidzDzimšanas = Math.ceil(timeDifference / (1000 * 3600 * 24)); 
 
             document.getElementById("dienas").value = dienasLidzDzimšanas;
         }
