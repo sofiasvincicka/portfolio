@@ -6,10 +6,17 @@
     <title>Informācijas daudzuma mērvienības</title>
     <style>
         body {
-            background-image: url('images/cipari.jpg') repeat;
-            background-size: contain;
-            font-family: Arial, sans-serif;
+            position: relative;
+  flex: 1;
+  background: url('images/cipari.jpg') repeat;
+  background-size: contain;
+  background-position: center;
+  padding: 20px;
         }
+        body* {
+  position: relative;
+  z-index: 1;
+}
         h1 {
             font-weight: bold;
         }
@@ -33,11 +40,12 @@
         .container {
             display: flex;
             align-items: center;
+            border-radius: 0;
         }
     </style>
 </head>
 <body>
-    <header>
+    
     <h1>Informācijas daudzuma mērvienības</h1>
     <form>
         <div class="container">
